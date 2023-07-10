@@ -24,6 +24,11 @@ public class DoktorController {
     @GetMapping("/findAll")
     public ResponseEntity<List<DoktorRequestDTO>> AllDoktor(){
         List<DoktorRequestDTO> listDoktor = doktorService.AllDoktor();
+        System.out.println("Controller degisdi");
+        System.out.println("Service Deneme degisdi");
+        System.out.println("Service Deneme degisdi");
+        System.out.println("Service Deneme degisdi");
+        System.out.println("Service Deneme degisdi");
         return ResponseEntity.ok(listDoktor);
     }
 

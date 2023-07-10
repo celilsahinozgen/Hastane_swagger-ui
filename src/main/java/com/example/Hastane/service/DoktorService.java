@@ -28,7 +28,12 @@ public class DoktorService {
         List<Doktor> listDoktor = doktorRepository.findAll();
         List<DoktorRequestDTO> ResponseDoktor = listDoktor.stream().map(doktor ->
                 modelMapper.map(doktor, DoktorRequestDTO.class)).collect(Collectors.toList());
+
+        System.out.println("Service Deneme3 degisdi");
+
         return ResponseDoktor;
+
+
     }
 
     public DoktorRequestDTO findByDoktor(Long id) {

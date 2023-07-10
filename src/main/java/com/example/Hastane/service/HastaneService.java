@@ -33,6 +33,8 @@ public class HastaneService {
 
     public HastaneSaveDTO saveHastane(HastaneSaveDTO newHastane) {
         Hastane hastane = modelMapper.map(newHastane, Hastane.class);
+
+        System.out.println("Service Deneme3 degisdi");
         return modelMapper.map(hastaneRepository.save(hastane), HastaneSaveDTO.class);
     }
 
