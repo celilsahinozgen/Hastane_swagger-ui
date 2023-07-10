@@ -33,6 +33,7 @@ public class HastaService {
     public HastaRequestDTO FindByHasta(Long id) {
         Optional<Hasta> optionalHasta = hastaRepository.findById(id);
         if (optionalHasta.isPresent()) {
+            System.out.println("Service Deneme3 degisdi");
             return modelMapper.map(optionalHasta.get(), HastaRequestDTO.class);
         }
           throw new RuntimeException("kullanıcı bulunamadı!!!");
